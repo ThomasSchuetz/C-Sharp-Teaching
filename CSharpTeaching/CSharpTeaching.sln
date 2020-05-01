@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asynchronous", "Asynchronou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serialization", "Serialization\Serialization.csproj", "{7C0AF181-02D1-4ACB-AB50-ABB2B751618F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegularExpressions", "RegularExpressions\RegularExpressions.csproj", "{92A53A33-0CC1-47EF-9BFC-F0201F711CF2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegularExpressions.Tests", "RegularExpressions.Tests\RegularExpressions.Tests.csproj", "{A6604B7E-D639-4349-BDEE-ADDD3B40CD0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{7C0AF181-02D1-4ACB-AB50-ABB2B751618F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C0AF181-02D1-4ACB-AB50-ABB2B751618F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C0AF181-02D1-4ACB-AB50-ABB2B751618F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A53A33-0CC1-47EF-9BFC-F0201F711CF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A53A33-0CC1-47EF-9BFC-F0201F711CF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A53A33-0CC1-47EF-9BFC-F0201F711CF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A53A33-0CC1-47EF-9BFC-F0201F711CF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6604B7E-D639-4349-BDEE-ADDD3B40CD0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6604B7E-D639-4349-BDEE-ADDD3B40CD0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6604B7E-D639-4349-BDEE-ADDD3B40CD0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6604B7E-D639-4349-BDEE-ADDD3B40CD0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
