@@ -6,7 +6,7 @@ Illustrate the benefits of asynchronous programming principles.
 
 ## Setup
 
-The given WPF gui compares a synchronous, asynchronous and parallelized asynchonous execution of 6 tasks.
+The given WPF GUI compares a synchronous, asynchronous and parallelized asynchronous execution of 6 tasks.
 The synchronous version has already been provided.
 
 ## Tasks
