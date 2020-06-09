@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asynchronous", "Asynchronou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serialization", "Serialization\Serialization.csproj", "{1C0B62DA-AB96-4C66-B99F-AE5E3FCFB31C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressions", "RegularExpressions\RegularExpressions.csproj", "{678B079E-C4E8-48FA-9BF3-3FAA53C29ACA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegularExpressions", "RegularExpressions\RegularExpressions.csproj", "{678B079E-C4E8-48FA-9BF3-3FAA53C29ACA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressions.Tests", "RegularExpressions.Tests\RegularExpressions.Tests.csproj", "{7C913CD0-A8A7-4513-B305-4058A77B7051}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegularExpressions.Tests", "RegularExpressions.Tests\RegularExpressions.Tests.csproj", "{7C913CD0-A8A7-4513-B305-4058A77B7051}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoringWithLINQ", "RefactoringWithLINQ\RefactoringWithLINQ.csproj", "{EF660CF4-0321-4499-8E3E-CB06625922BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7C913CD0-A8A7-4513-B305-4058A77B7051}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C913CD0-A8A7-4513-B305-4058A77B7051}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C913CD0-A8A7-4513-B305-4058A77B7051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF660CF4-0321-4499-8E3E-CB06625922BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF660CF4-0321-4499-8E3E-CB06625922BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF660CF4-0321-4499-8E3E-CB06625922BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF660CF4-0321-4499-8E3E-CB06625922BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

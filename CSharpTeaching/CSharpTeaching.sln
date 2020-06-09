@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegularExpressions", "Regul
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegularExpressions.Tests", "RegularExpressions.Tests\RegularExpressions.Tests.csproj", "{A6604B7E-D639-4349-BDEE-ADDD3B40CD0E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefactoringWithLINQ", "RefactoringWithLINQ\RefactoringWithLINQ.csproj", "{24850B99-2F46-430A-80BE-D71D50F6A5CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A6604B7E-D639-4349-BDEE-ADDD3B40CD0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6604B7E-D639-4349-BDEE-ADDD3B40CD0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6604B7E-D639-4349-BDEE-ADDD3B40CD0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24850B99-2F46-430A-80BE-D71D50F6A5CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24850B99-2F46-430A-80BE-D71D50F6A5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24850B99-2F46-430A-80BE-D71D50F6A5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24850B99-2F46-430A-80BE-D71D50F6A5CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
