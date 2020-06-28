@@ -2,9 +2,9 @@
 
 namespace Serialization
 {
-    static class Program
+    internal static class Program
     {
-        static void Main()
+        private static void Main()
         {
             var inventory = InventoryData.GetData();
 
