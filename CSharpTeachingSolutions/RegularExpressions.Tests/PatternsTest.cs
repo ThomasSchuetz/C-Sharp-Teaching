@@ -1,6 +1,4 @@
-﻿// This exercise is strongly inspired by https://dotnetfiddle.net/o3Q1tc
-
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Text.RegularExpressions;
 using System;
 using System.Linq;
@@ -16,10 +14,10 @@ namespace RegularExpressions.Tests
         [TestInitialize]
         public void Initialize()
         {
-            text = "karunya123.edu  , www.karunya.edu, www.karunya.edu,  " +
-                   "http://karunya.edu, https://karunya.edu, www.karunyauniversity.in  ,  " +
-                   "https://mykarunya.edu, https://www.karunya.edu  ,  " +
-                   "google.com,  google.co.in, www.google.com,  https://www.gmail.com, gmail.com";
+            text = "https://tokyo2020.org  ,  " +
+                   "https://www.bing.com , www.bing.com , " +
+                   "www.google.com, www.google.com,  https://www.gmail.com, gmail.com, " + 
+                   "http://web.mit.edu,  https://www.rwth-aachen.de";
         }
 
         [TestCleanup]
@@ -34,10 +32,15 @@ namespace RegularExpressions.Tests
 
             var expectedResult = new[]
             {
-                "karunya123.edu", "www.karunya.edu", "www.karunya.edu", "http://karunya.edu",
-                "https://karunya.edu", "www.karunyauniversity.in", "https://mykarunya.edu",
-                "https://www.karunya.edu", "google.com", "google.co.in", "www.google.com",
-                "https://www.gmail.com", "gmail.com"
+                "https://tokyo2020.org",
+                "https://www.bing.com", 
+                "www.bing.com",
+                "www.google.com", 
+                "www.google.com",
+                "https://www.gmail.com", 
+                "gmail.com",
+                "http://web.mit.edu",
+                "https://www.rwth-aachen.de"
             };
             Assert.IsTrue(EvaluateResult(expectedResult, matches));
         }
@@ -51,23 +54,29 @@ namespace RegularExpressions.Tests
 
             var expectedResult = new[]
             {
-                "https://karunya.edu", "https://mykarunya.edu",
-                "https://www.karunya.edu", "https://www.gmail.com"
+                "https://tokyo2020.org",
+                "https://www.bing.com",
+                "https://www.gmail.com",
+                "https://www.rwth-aachen.de"
             };
             Assert.IsTrue(EvaluateResult(expectedResult, matches));
         }
 
         [TestMethod]
-        public void Test_03_extract_all_URLs_ending_with_edu()
+        public void Test_03_extract_all_URLs_ending_with_com()
         {
-            // 3. URLs ending with .edu
-            string pattern = @"(http[s]?://)?(www.)?\w+.edu";
+            // 3. URLs ending with .com
+            string pattern = @"(http[s]?://)?(www.)?\w+.com";
             var matches = EvaluatePattern(pattern);
 
             var expectedResult = new[]
             {
-                "karunya123.edu", "www.karunya.edu", "www.karunya.edu", "http://karunya.edu",
-                "https://karunya.edu", "https://mykarunya.edu", "https://www.karunya.edu"
+                "https://www.bing.com",
+                "www.bing.com",
+                "www.google.com",
+                "www.google.com",
+                "https://www.gmail.com",
+                "gmail.com",
             };
             Assert.IsTrue(EvaluateResult(expectedResult, matches));
         }
@@ -79,9 +88,10 @@ namespace RegularExpressions.Tests
             string pattern = @"[aeiou]";
             string result = ReplacePatternInText(pattern, "X");
 
-            var expectedResult = "kXrXnyX123.XdX  , www.kXrXnyX.XdX, www.kXrXnyX.XdX,  http://kXrXnyX.XdX, " +
-                                 "https://kXrXnyX.XdX, www.kXrXnyXXnXvXrsXty.Xn  ,  https://mykXrXnyX.XdX, https://www.kXrXnyX.XdX  ,  " +
-                                 "gXXglX.cXm,  gXXglX.cX.Xn, www.gXXglX.cXm,  https://www.gmXXl.cXm, gmXXl.cXm";
+            var expectedResult = "https://tXkyX2020.Xrg  ,  " +
+                   "https://www.bXng.cXm , www.bXng.cXm , " +
+                   "www.gXXglX.cXm, www.gXXglX.cXm,  https://www.gmXXl.cXm, gmXXl.cXm, " +
+                   "http://wXb.mXt.XdX,  https://www.rwth-XXchXn.dX";
             Assert.AreEqual(expectedResult, result);
         }
 
@@ -92,9 +102,10 @@ namespace RegularExpressions.Tests
             string pattern = @"\d";
             string result = ReplacePatternInText(pattern, "1");
 
-            var expectedResult = "karunya111.edu  , www.karunya.edu, www.karunya.edu,  http://karunya.edu, " +
-                                 "https://karunya.edu, www.karunyauniversity.in  ,  https://mykarunya.edu, https://www.karunya.edu  ,  " +
-                                 "google.com,  google.co.in, www.google.com,  https://www.gmail.com, gmail.com";
+            var expectedResult = "https://tokyo1111.org  ,  " +
+                   "https://www.bing.com , www.bing.com , " +
+                   "www.google.com, www.google.com,  https://www.gmail.com, gmail.com, " +
+                   "http://web.mit.edu,  https://www.rwth-aachen.de";
             Assert.AreEqual(expectedResult, result);
         }
 
@@ -114,7 +125,7 @@ namespace RegularExpressions.Tests
                 }
             }
 
-            var expectedResult = new string[] { "www.karunya.edu", "www.karunya.edu" };
+            var expectedResult = new string[] { "www.google.com", "www.google.com" };
             Assert.IsTrue(EvaluateResult(expectedResult, duplicateResults.ToArray()));
         }
 
