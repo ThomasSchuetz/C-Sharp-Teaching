@@ -4,16 +4,16 @@ namespace RefactoringWithLINQ
 {
     public class Book
     {
-        public string Author { get; }
-        public string Title { get; }
-        public int PublicationYear { get; }
-
         public Book(string title, string author, int publicationYear)
         {
             Title = title;
             Author = author;
             PublicationYear = publicationYear;
         }
+
+        public string Author { get; }
+        public string Title { get; }
+        public int PublicationYear { get; }
 
         public override string ToString() => $"{Title} by {Author}, published in {PublicationYear}";
 
