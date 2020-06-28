@@ -13,7 +13,14 @@ namespace RegularExpressions
         public decimal AdjClose { get; }
         public long Volume { get; }
 
-        private MarketDay(DateTime date, decimal open, decimal high, decimal low, decimal close, decimal adjClose, long volume)
+        private MarketDay(
+            DateTime date,
+            decimal open,
+            decimal high,
+            decimal low,
+            decimal close,
+            decimal adjClose,
+            long volume)
         {
             Date = date;
             Open = open;
@@ -24,7 +31,8 @@ namespace RegularExpressions
             Volume = volume;
         }
 
-        public override string ToString() => $"{Date.ToShortDateString()} - open: {Open}, close: {Close}, volume: {Volume}";
+        public override string ToString() =>
+            $"{Date.ToShortDateString()} - open: {Open}, close: {Close}, volume: {Volume}";
 
         public static bool TryParse(string data, out MarketDay marketDay)
         {

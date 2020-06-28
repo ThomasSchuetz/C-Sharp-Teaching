@@ -2,13 +2,13 @@
 
 namespace RegularExpressions
 {
-    static class Program
+    internal static class Program
     {
-        static void Main()
+        private static void Main()
         {
-            var filename = "GoldPrice_USD.csv";
+            const string Filename = "GoldPrice_USD.csv";
 
-            var data = MarketDataReader.Reader(filename);
+            var data = MarketDataReader.Reader(Filename);
 
             foreach (var item in data)
             {
