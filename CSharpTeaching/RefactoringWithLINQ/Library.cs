@@ -42,7 +42,7 @@ namespace RefactoringWithLINQ
                 booksCopy.Add(book);
             }
 
-            booksCopy.Sort((b1, b2) => b1.PublicationYear > b2.PublicationYear ? 1 : b2.PublicationYear > b1.PublicationYear ? -1 : 0);
+            booksCopy.Sort((b1, b2) => b1.PublicationYear.CompareTo(b2.PublicationYear));
 
             return booksCopy;
         }
